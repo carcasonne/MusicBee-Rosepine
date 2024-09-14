@@ -11,53 +11,57 @@
 <!-- Note: Content[TrackDetail].Body.Default uses this explicitly otherwise weird shit happens -->
 <root>
       <variables>
-        BaseColor="25,23,36"
-        SurfaceColor="31,29,46"
-        OverlayColor="38,35,58"
-        OverlayVariationColor="28,35,57" 
-        MutedColor="110,106,134"
-        SubtleColor="144,140,170"
+        BaseColor="250,244,237"
+        SurfaceColor="255,250,243"
+        OverlayColor="242,233,222"
+        OverlayVariationColor="241,233,222" 
+        MutedColor="152,147,165"
+        SubtleColor="121,117,147"
 
-        TextColor="224,222,244"
-        LoveColor="235,111,146"
-        GoldColor="246,193,119"
-        RoseColor="235,188,186"
-        PineColor="49,116,143"
-        FoamColor="156,207,216"
-        IrisColor="196,167,231"
+        TextColor="87,82,11"   
+        LoveColor="180,99,122"
+        GoldColor="234,157,52"
+        RoseColor="215,130,126"
+        PineColor="40,105,31"
+        FoamColor="86,148,159"
+        IrisColor="144,122,169"
 
-        HighlightLowColor="33,32,46"
-        HighlightMedColor="64,61,82"
-        HighlightHighColor="82,79,103"
-
-        DawnTextColor="87,82,121"
+        HighlightLowColor="244,237,232"
+        HighlightMedColor="223,218,217"
+        HighlightHighColor="206,202,205"
         
-        Highlight=PineColor
-        Highlight2=PineColor
-	  Highlight-Text=Base
+        Highlight=RoseColor
+        Highlight2=TextColor
+	  Highlight-Text=BaseColor
+
         ProgressBarColor=FoamColor
+        PlayerControls=PineColor
+
         Spectrum-Low=PineColor
 	  Spectrum-Medium=FoamColor
 	  Spectrum-High=IrisColor
         Spectrum2-Medium=PineColor
         Spectrum2-High=PineColor
-        Primary-Text=TextColor
-        Secondary-Text=IrisColor
+
+        Primary-Text=PineColor
+        Secondary-Text=TextColor
         Tertiary-Text=PineColor
-        PlayerControlsColor=IrisColor
-        Scrollbar-Color=SubtleColor
+        
+        Scrollbar-Color=LoveColor
         Background=OverlayColor
         Background2=OverlayVariationColor
         Surface=MutedColor
         Button=BaseColor
 
-        RatingEmpty=TextColor
-        RatingFull=MutedColor
+        RatingEmptyHighlight=BaseColor
+        RatingFullHighlight=TextColor
 
         SidebarBackground=Background
         NowPlayingList=Background
         SidebarHeader=Background
         SidebarPlayer=IrisColor
+
+        PreferenceField=SurfaceColor
 	</variables>
 
 <colours id="Default">
@@ -181,7 +185,7 @@
   <element id="Content[TrackDetail].Header" fg="Secondary-Text" />
   <element id="Content[TrackDetail].Body.ListHeader" bg="Background" bg2="Background" fg="Secondary-Text" bdr="Background" /> <!-- Now Playing Details Headerbar -->
 
-  <element id="Content[TrackDetail].Body.Default" bg="41,38,61" fg="224,222,244" /> <!-- bg album from album&tracks view, fg speaker icon too -->
+  <element id="Content[TrackDetail].Body.Default" bg="249,240,230" fg="87,82,11" /> <!-- bg album from album&tracks view, fg speaker icon too -->
   <element id="Content[TrackDetail].Body.Disabled" bg="Background" fg="120,120,120" />
   <element id="Content[TrackDetail].Body.Highlight" bg="Highlight" fg="Highlight-Text" />
   <element id="Content[TrackDetail].Body.Lowlight" bg="Background" fg="Secondary-Text" />
@@ -232,10 +236,10 @@
 
 \\ --- RATINGS  
   <element id="Panel.StarRating.Default" fg="Highlight2" fg2="Background" /> 
-  <element id="Panel.StarRating.Highlight" fg="RatingFull" fg2="RatingEmpty" /> 
+  <element id="Panel.StarRating.Highlight" fg="RatingFullHighlight" fg2="RatingEmptyHighlight" /> 
   <element id="Panel.StarRating.Lowlight" fg="Highlight2" fg2="Background" />
-  <element id="Panel.NotLovedIcon.Highlight" fg="RatingFull" fg2="RatingEmpty" />  
-  <element id="Panel.NotLovedIcon.Lowlight" fg2="RatingFull" /> 
+  <element id="Panel.NotLovedIcon.Highlight" fg="GoldColor" fg2="RatingFullHighlight" />  
+  <element id="Panel.NotLovedIcon.Lowlight" fg2="RatingFullHighlight" />
 \\ --- NOW PLAYING DOCKED IN CENTER
   <element id="NowPlayingTabsBar.Tab.Highlight" bg="60,60,60" fg="190,190,190" bdr="60,60,60" />
   
@@ -264,14 +268,14 @@
   <element id="PlayerFlat.DisplayPanel" fg="Primary-Text" bg="Background" />
   <element id="PlayerFlat.ProgressBar" bg="70,70,70" fg="Highlight2" bdr="Background" /> <!-- fg is used for the fill colour -->
   <element id="PlayerFlat.ProgressButton" fg="Highligh2t" />
-  <element id="PlayerFlat.Control.Default" fg="Secondary-Text" />
-  <element id="PlayerFlat.Control.Disabled" fg="PlayerControlsColor" />
+  <element id="PlayerFlat.Control.Default" fg="PlayerControls" />
+  <element id="PlayerFlat.Control.Disabled" fg="PlayerControls" />
   <element id="PlayerFlat.Control.Highlight" fg="Highlight2" />
   <element id="PlayerFlat.StarRating.Default" fg="Highlight2" />
   <element id="PlayerFlat.StarRating.Lowlight" fg="80,80,80" />
   <element id="PlayerFlat.Volume" fg="220,220,220" bdr="130,130,130" />
   <element id="PlayerFlat.VolumeButton" bg="220,220,220" bg2="60,60,60" bdr="115,115,115" />
-  <element id="PlayerFlat.VolumeSlider" fg="Secondary-Text" bg="75,75,75" bg2="190,190,190" /> 
+  <element id="PlayerFlat.VolumeSlider" fg="PlayerControls" bg="75,75,75" bg2="190,190,190" /> 
   <element id="PlayerFlat.SpectrumDefault" bg="Background" />
   <element id="PlayerFlat.SpectrumDead" bg="Background" />
   <element id="PlayerFlat.SpectrumLow" bg="Spectrum-Low" />
@@ -302,7 +306,7 @@
   <element id="Compact.Player.ProgressBar" bg="60,60,60" fg="ProgressBarColor" bdr="Background"/>
   <element id="Compact.Player.ProgressButton" fg="Highlight2" />
   <element id="Compact.Player.Control.Default" fg="240,240,240" />
-  <element id="Compact.Player.Control.Disabled" fg="PlayerControlsColor" />
+  <element id="Compact.Player.Control.Disabled" fg="PlayerControls" />
   <element id="Compact.Player.Control.Highlight" fg="Highlight2" />
   <element id="Compact.Player.Volume" fg="240,240,240" bdr="180,180,180" />
   <element id="Compact.Player.Wavebar" fg="130,130,130" fg2="60,60,60" />
@@ -317,7 +321,7 @@
   <element id="PlayerMini.ProgressBar" bg="70,70,70" fg="ProgressBarColor" />
   <element id="PlayerMini.ProgressButton" fg="Highlight2" />
   <element id="PlayerMini.Control.Default" fg="130,130,130" />
-  <element id="PlayerMini.Control.Disabled" fg="PlayerControlsColor" />
+  <element id="PlayerMini.Control.Disabled" fg="PlayerControls" />
   <element id="PlayerMini.Control.Highlight" fg="Highlight2" />
   <element id="PlayerMini.Spectrum" fg="Spectrum2-Medium" />
 
@@ -330,23 +334,23 @@
   <element id="Controls.VerticalMenu.Highlight" bg="Highlight" fg="Highlight-Text" />
   <element id="Controls.VerticalMenu.Lowlight" bg="220,220,220" fg="75,75,75" />
   <element id="Controls.DropdownButton.Default" bg="Background" bg2="Background" fg="Secondary-Text" bdr="Background" />
-  <element id="Controls.DropdownButton.Disabled" bg="120,120,120" bg2="120,120,120" fg="70,70,70" bdr="120,120,120" />
+  <element id="Controls.DropdownButton.Disabled" bg="PreferenceField" bg2="PreferenceField" fg="70,70,70" bdr="PreferenceField" />
   <element id="Controls.InputControl.Default" bg="Background" fg="Secondary-Text" bdr="90,90,90" />
-  <element id="Controls.InputControl.Disabled" bg="120,120,120" fg="70,70,70" bdr="60,60,60" />
+  <element id="Controls.InputControl.Disabled" bg="PreferenceField" fg="70,70,70" bdr="60,60,60" />
   <element id="Controls.InputControl.Highlight" bg="220,220,220" fg="75,75,75"/>
   <element id="Controls.InputControl.Lowlight" bg="220,220,220" fg="75,75,75" />
-  <element id="Controls.ListHeader" bg="120,120,120" bg2="120,120,120" fg="Background" />
+  <element id="Controls.ListHeader" bg="PreferenceField" bg2="PreferenceField" fg="Background" />
   <element id="Controls.LockedInputControl.Default"  bg="49,49,49" fg="150,150,150" />
   <element id="Controls.LockedInputControl.Disabled" bg="49,49,49" fg="150,150,150" />
   <element id="Controls.Button.Default" bg="180,180,180" fg="75,75,75" bdr="170,170,170" />
   <element id="Controls.Button.Highlight" bg="Highlight" fg="Highlight-Text" bdr="Highlight" />
-  <element id="Controls.Button.Disabled" bg="120,120,120" fg="70,70,70" bdr="60,60,60" />
+  <element id="Controls.Button.Disabled" bg="PreferenceField" fg="70,70,70" bdr="60,60,60" />
   <element id="Controls.RadioButton.Default" bg="Highlight2" />
   <element id="Controls.RadioButton.Disabled" bg="55,55,55" />
   <element id="Controls.SliderLine.Default" fg="160,160,160" /> <!-- sliders -->
   <element id="Controls.SliderLine.Disabled" fg="70,70,70" />
   <element id="Controls.SliderButton.Default" bg="190,190,190" fg="190,190,190" />
-  <element id="Controls.SliderButton.Disabled" bg="120,120,120" fg="70,70,70" />
+  <element id="Controls.SliderButton.Disabled" bg="PreferenceField" fg="70,70,70" />
 \\ --- SCROLLBARS  
   <element id="Controls.ScrollBar.Default" bg="Scrollbar-Color" bg2="Scrollbar-Color" /> 
   <element id="Controls.ScrollBarThumb.Default" bg="0,34,35,39" bg2="0,34,35,39" fg="Scrollbar-Color" bdr="0,34,35,39" /> 
@@ -444,35 +448,35 @@
   </element>
   <!-- 1x4 done -->
   <element id="FormBorderBottom">
-        iVBORw0KGgoAAAANSUhEUgAAAAEAAAAECAIAAADAusJtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAATSURBVBhXY1BXsWZiYGCAYAYGAAeAAI2qwKAaAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAAEAAAAECAIAAADAusJtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAUSURBVBhXY/j08h4TAwMDBDMwAAAmcgLAbN7aDwAAAABJRU5ErkJggg==
   </element>
   <!-- 4x4 done -->
   <element id="FormBorderBottomLeft">
-        iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZSURBVBhXY1RTtmIAAxYWFiYICwJwcRgYABxyAJfrtC4PAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAXSURBVBhXY/z08h4DDDBBaTDAxWFgAACJOgLBw4MmMAAAAABJRU5ErkJggg==
   </element>
   <!-- 4x4 done -->
   <element id="FormBorderBottomRight">
-        iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZSURBVBhXY1RTtmIAAxYWFiYICwJwcRgYABxyAJfrtC4PAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAXSURBVBhXY/z08h4DDDBBaTDAxWFgAACJOgLBw4MmMAAAAABJRU5ErkJggg==
   </element>
   <!-- 4x1 done -->
   <element id="FormBorderLeft">
-        iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAARSURBVBhXY1RTtmIAAxYWFgAFvwCR05Z9qQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAARSURBVBhXY/z08h4DBDAwAAAeIQK7V1durwAAAABJRU5ErkJggg==
   </element>
   <!-- 4x1 done -->
   <element id="FormBorderRight">
-        iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAARSURBVBhXY1RTtmIAAxYWFgAFvwCR05Z9qQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAARSURBVBhXY/z08h4DBDAwAAAeIQK7V1durwAAAABJRU5ErkJggg==
   </element>
   <!-- 1x28 done -->
   <element id="FormBorderTop">
-        iVBORw0KGgoAAAANSUhEUgAAAAEAAAAcCAIAAAAvP0KbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAUSURBVBhXY1BXsWZiYGCgD2ZgAABFwAC9giE/xQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAAEAAAAcCAIAAAAvP0KbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAUSURBVBhXY/j08h4TAwMDfTADAwA34QLwkGdj/AAAAABJRU5ErkJggg==
   </element>
   <!-- 5x28 done-->
   <element id="FormBorderTopLeft">
-        iVBORw0KGgoAAAANSUhEUgAAAAUAAAAcCAIAAAAm1OLhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAaSURBVChTY1RXsWZAAkxQGgZG+ahgcPEZGAAcLwC+jk54/QAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAAAcCAIAAAAm1OLhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAbSURBVChTY/z08h4DEmCC0jAwykcFg4vPwAAA8V4C8QD+pBcAAAAASUVORK5CYII=
   </element>
   <!-- 5x28 done -->
   <element id="FormBorderTopRight">
-        iVBORw0KGgoAAAANSUhEUgAAAAUAAAAcCAIAAAAm1OLhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAaSURBVChTY1RXsWZAAkxQGgZG+ahgcPEZGAAcLwC+jk54/QAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAAAcCAIAAAAm1OLhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAbSURBVChTY/z08h4DEmCC0jAwykcFg4vPwAAA8V4C8QD+pBcAAAAASUVORK5CYII=
   </element>
   <element id="FormMaximiseButton">
 		iVBORw0KGgoAAAANSUhEUgAAABwAAAAPAQMAAADNgT3iAAAABlBMVEUAAACZmZl+9SADAAAAAXRSTlMAQObYZgAAABdJREFUeNpjYEAD9R+AhIMAcQRYMQwAALx0BV+Bxv4wAAAAAElFTkSuQmCC

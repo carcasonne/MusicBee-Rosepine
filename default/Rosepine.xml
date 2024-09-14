@@ -29,10 +29,8 @@
         HighlightLowColor="33,32,46"
         HighlightMedColor="64,61,82"
         HighlightHighColor="82,79,103"
-
-        DawnTextColor="87,82,121"
         
-        Highlight=PineColor
+        Highlight=IrisColor
         Highlight2=PineColor
 	  Highlight-Text=Base
         ProgressBarColor=FoamColor
@@ -234,8 +232,8 @@
   <element id="Panel.StarRating.Default" fg="Highlight2" fg2="Background" /> 
   <element id="Panel.StarRating.Highlight" fg="RatingFull" fg2="RatingEmpty" /> 
   <element id="Panel.StarRating.Lowlight" fg="Highlight2" fg2="Background" />
-  <element id="Panel.NotLovedIcon.Highlight" fg="RatingFull" fg2="RatingEmpty" />  
-  <element id="Panel.NotLovedIcon.Lowlight" fg2="RatingFull" /> 
+  <element id="Panel.NotLovedIcon.Highlight" fg="GoldColor" fg2="RatingFull" />  
+  <element id="Panel.NotLovedIcon.Lowlight" fg2="RatingFull" />
 \\ --- NOW PLAYING DOCKED IN CENTER
   <element id="NowPlayingTabsBar.Tab.Highlight" bg="60,60,60" fg="190,190,190" bdr="60,60,60" />
   
