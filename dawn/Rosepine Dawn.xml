@@ -59,7 +59,7 @@
         SidebarBackground=Background
         NowPlayingList=Background
         SidebarHeader=Background
-        SidebarPlayer=IrisColor
+        SidebarPlayer=PineColor
 
         PreferenceField=SurfaceColor
 	</variables>
